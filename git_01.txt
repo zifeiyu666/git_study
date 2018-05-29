@@ -69,6 +69,36 @@ git rm log/\*.log
   当你和其他人在同一时间克隆，他们先推送到上游然后你再推送到上游，你的推送就会毫无疑问地被拒绝。你必须先将他们的工作拉取下
   来并将其合并进你的工作后才能推送
 
+vim 操作： i -- 编辑； （shift + ;） -- 进入命令模式  w -- 写入  q -- 退出;
+
+远程仓库的移除与重命名
+  git remote rename [oldname] [newname]
+  git remote rm [name]
+
+打标签
+  列出标签 git tag [版本号]
+
+创建标签
+  Git 使用两种主要类型的标签：轻量标签（lightweight）与附注标签（annotated）
+  附注标签 git tag -a v1.4 -m 'version 1.4'
+  轻量标签 git tag v1.4-lw
+
+后期打标签 git tag -a v1.2 <校验和>
+
+共享标签 git push origin [tagname]
+  传送所有标签 git push origin --tags
+
+检出标签
+  从仓库检出 git checkout -b [branchname] [tagname]
+  从本地检出 git checkout [tagname]
+
+Git 别名
+  git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+  git config --global alias.last 'log -1 HEAD'  查看最后一次提交
+  git config --global alias.unstage 'reset HEAD --' 取消暂存
 
 
 
