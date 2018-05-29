@@ -58,6 +58,19 @@ git rm log/\*.log
 远程仓库的使用
 
 查看远程仓库 git remote  / git remote -v
+  更多信息 git remote show origin
+
 添加远程仓库 git remote add <shortname> <url>
+
+从远程仓库中抓取与拉取 git fetch [remote-name]
+  如果你使用 clone 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写
+
+推送到远程仓库 git push [remote-name] [branch-name]
+  当你和其他人在同一时间克隆，他们先推送到上游然后你再推送到上游，你的推送就会毫无疑问地被拒绝。你必须先将他们的工作拉取下
+  来并将其合并进你的工作后才能推送
+
+
+
+
 
 
