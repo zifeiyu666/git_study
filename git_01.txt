@@ -132,6 +132,9 @@ Git 分支
 
 分支开发工作流
 
+远程分支
+  完整列表 git ls-remote
+  更详细的信息 git remote show
 
 
 
