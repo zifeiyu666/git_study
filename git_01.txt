@@ -103,6 +103,7 @@ $ git config --global alias.st status
 Git 分支
 
 新建分支 git branch <name>
+  新建分支并切换到新分支 git checkout -b <name>
 
 切换分支 git checkout <name>
   分支切换会改变你工作目录中的文件
@@ -113,6 +114,13 @@ Git 分支
 项目分叉历史
   你可以简单地使用 git log 命令查看分叉历史。运行 git log --oneline --decorate --graph --all
 ，它会输出你的提交历史、各个分支的指向以及项目的分支分叉情况。
+
+合并分支 git merge
+  当你试图合并两个分
+支时，如果顺着一个分支走下去能够到达另一个分支，那么 Git 在合并两者的时候，只会简单的将指针向前推进
+（指针右移），因为这种情况下的合并操作没有需要解决的分歧——这就叫做 “快进（fast-forward）”
+
+删除分支 git -d <name>
 
 
 
