@@ -39,18 +39,6 @@ git rm log/\*.log
 
 移动文件 git mv file_from file_to (如果强行修改文件名，会认为是删除旧文件添加新文件)
 
-强制移除： git rm -f
-  如果删除之前修改过并且已经放到暂存区域的话，则必须要用强
-制删除选项 -f（译注：即 force 的首字母）。这是一种安全特性，用于防止误删还没有添加到快照的数据，这
-样的数据不能被 Git 恢复。
-
-移除git仓库中的文件，单保留工作目录中的文件 git rm --cached 
-
-git rm 命令后面可以列出文件或者目录的名字，也可以使用 glob 模式
-git rm log/\*.log
-
-移动文件 git mv file_from file_to (如果强行修改文件名，会认为是删除旧文件添加新文件)
-
 查看提交历史：git log 
   git log -p 显示修改细节
   git log -2 显示最近两次提交
@@ -69,6 +57,7 @@ git rm log/\*.log
 
 远程仓库的使用
 
-查看远程仓库
+查看远程仓库 git remote  / git remote -v
+添加远程仓库 git remote add <shortname> <url>
 
 
