@@ -137,11 +137,12 @@ Git 分支
   更详细的信息 git remote show
 origin更改
 
-从远端拉取 git pull 
+从远端拉取  git pull  相当于 git fetch + git merge 
 
 设置跟踪分支 git checkout --track origin/branch
 将本地分支与远程分支设置为不同名字 git checkout -b <localname> origin/serverfix
 查看本地分支与远端分支的跟踪情况 git branch -vv
+
 
 
 
