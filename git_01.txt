@@ -100,6 +100,18 @@ $ git config --global alias.st status
   git config --global alias.last 'log -1 HEAD'  查看最后一次提交
   git config --global alias.unstage 'reset HEAD --' 取消暂存
 
+Git 分支
+
+新建分支 git branch <name>
+
+切换分支 git checkout <name>
+  分支切换会改变你工作目录中的文件
+在切换分支时，一定要注意你工作目录里的文件会被改变。如果是切换到一个较旧的分支，
+你的工作目录会恢复到该分支最后一次提交时的样子。如果 Git 不能干净利落地完成这个任
+务，它将禁止切换分支。
+
+
+
 
 
 
