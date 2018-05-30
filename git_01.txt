@@ -147,18 +147,15 @@ origin更改
   基本上这个命令做的只是从服务器上移除这个指针。Git 服务器通常会保留数据一段时间直到垃圾回收运行，所
 以如果不小心删除掉了，通常是很容易恢复的。
 
-变基 git rebase master
+变基 git rebase master --将当前分支变基到master分支
   在 Git 中整合来自不同分支的修改主要有两种方法：merge 以及 rebase。在本节中我们将学习什么是“变
 基”，怎样使用“变基”，并将展示该操作的惊艳之处，以及指出在何种情况下你应避免使用它
-  master
   你在查看一个经过变基的分支的历史记录时会发现，尽管
 实际的开发工作是并行的，但它们看上去就像是先后串行的一样，提交历史是一条直线没有分叉。
-  branch
 
+截取特性分支上的另一个特性分支，然后变基到其他分支
+ 从一个特性分支里再分出一个特性分支的提交历史 git rebase --onto master server client
+  client分支是server分支的子分支，意思是找到client和server的共同祖先，把共同祖先之后的client分支修改在master分支上重演一遍。
 
-
-
-
-
-
-
+将 server 中的修改变基到 master 上 git rebase master server 
+  如果当前分支是master，用这个命令省去了把当前分支切换到server再执行git rebase master的操作，减少了一次切换分支的操作。
